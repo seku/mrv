@@ -1,0 +1,22 @@
+!!!
+%html{:lang => "en"}
+  %head
+    %title= content :title
+    %meta{:charset => "utf-8"}
+    %meta{:name => "google-site-verification", :content => "v4snWhsqmk3h_xuBapfZ-cipD9SqGt0tw0-oDQgTBZM"} 
+    %script{:src => "/vendor/jquery/jquery-min.js"}
+    %script{:src => "/vendor/underscore/underscore-min.js"}
+    %script{:src => "/vendor/backbone/backbone-min.js"}
+    %link{:rel => "stylesheet", :href => "/styles/kube101/css/kube.css"}
+    %link{:rel => "stylesheet", :href => "/styles/app.css"}
+    %link{:rel => "shortcut icon", :href => "images/favicon.ico", :type => "image/x-icon"}
+    %script{:src => "/scripts/app.js"}
+  %body
+    .wrapper
+      #header.group
+        %header
+          = partial :header
+        = yield
+      #footer.group
+        %footer
+          = partial :footer
