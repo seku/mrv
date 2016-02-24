@@ -1,100 +1,32 @@
 @import "compass/css3"
 @import "font-stack"
 
-
-body
-  background-image: url(/images/index1.jpg)
-  font-family: Helvetica, Arial, Sans-serif !important
-a
-  text-decoration: none
-
-p
-  font-family: Helvetica, Arial, Sans-serif
-
-h2, h3
-  font-weight: normal
-  
-#promo
-  margin-bottom: 3em
-  
-fieldset#address
-  height: 267px
-
-iframe
-  width: 1100px
-  height: 500px
-  
-li  
-  margin-bottom: 10px
-  
-li textarea
-  resize: none
-
-p#quote
-  font-weight: bold
-  font-style: italic
-  font-size: 33px
-  font-family: Helvetica, Arial, Sans-serif
-  text-align: center
-  color: #303413
-  margin-bottom: 50px
-  
-.footer
-  text-align: center
-  margin-bottom: 20px
-  h2
-    font-size: 60px
-  
-#intro.inner
-  background-color: rgb(233, 230, 218)
-  background-color: rgba(233, 230, 218, 0.9)
-
-/* =Common
- *-----------------------------------------------------------------------------
-
-img, #feedback, #banner, #intro li
-  border-radius: 3px
-
-/* =Layout
- *-----------------------------------------------------------------------------
-
-.wrapper
-  padding: 0 10px
-  width: 94%
-  max-width: 1300px
-  margin: auto
-
-#outer
-  padding: 3em 0 1em 0
-  margin: 1em 0 3em 0
-  background: url(../i/demobg.png) #282828
-  box-shadow: 0 3px 7px #000 inset
-  color: #f2f2f2
-
-/* =Header
-
 #header
+  position: fixed
+  top: 0
+  left: 0
   text-decoration: none
-  padding-top: 30px
   margin-bottom: .6em
-  h1
-    float: left
-    font-size: 32px
-    margin-top: 1px
-    margin-bottom: 0
-    color: rgb(0, 0, 0)
-    color: rgba(0, 0, 0, 0.8)
-    
+  padding: 5px 20px 0 20px
+  background-color: white
+  width: 100%
+  z-index: 1
+  box-shadow: 2px 2px 4px rgba(83,100,122,.35)
+  img
+    height: 70px
+    width: 140px
+    margin-top: 3px
+    margin-bottom: 5px
   nav
-    margin-top: 70px
     float: right
+    padding-top: 35px
     ul
       margin: 0
       list-style: none
       overflow: hidden
       text-transform: uppercase
       font-family: Helvetica, Arial, Sans-serif
-      font-size: 32px
+      font-size: 12px
       li
         float: left
         margin-left: 2em
@@ -103,142 +35,68 @@ img, #feedback, #banner, #intro li
           color: #000
           color: rgb(0, 0, 0)
           color: rgba(0, 0, 0, 0.8)
-
-/* =Promo
- *-----------------------------------------------------------------------------
-
-#promo
-  margin-bottom: 1.5em
-
-/* =Intro
- *-----------------------------------------------------------------------------
-
-#intro
-  .subheader
-    color: rgb(0, 0, 0)
-    color: rgba(0, 0, 0, 0.4)
-    padding-bottom: .3em
-    border-bottom: 1px solid #ccc
-
-/* =Feedback
- *-----------------------------------------------------------------------------
-
-#feedback
-  background-color: #000
-  padding: 2em 3em
-
-/* =Banner
- *-----------------------------------------------------------------------------
-
-#banner
-  line-height: 0
-  padding: 1.5em
-  background-color: #e9e6da
-
-/* =Blocks
- *-----------------------------------------------------------------------------
-
-#blocks
-  dl
-    overflow: hidden
-    margin: 0
-    padding-bottom: 1.5em
-  dt
-    float: left
-    width: 22%
-    margin-right: 4%
-    img
-      padding: 4px
-      background-color: #fff
-      border: 1px solid #000
-      box-shadow: 4px 4px 0 #000
-  dd
-    margin: 0
-    float: left
-    width: 74%
-    padding-bottom: 1.5em
-
-/* =Partners
- *-----------------------------------------------------------------------------
-
-#partners
-  padding-top: 1.5em
-  h4
-    color: #666
-
-/* =Footer
- *-----------------------------------------------------------------------------
+          &:hover
+            color: red
+        &.current
+          margin-top: -3px
+          a
+            font-weight: bold
+            font-size: 14px
+#body
+  margin-top: 83px
+  min-height: 300px
+  background-color: #f0edea
 
 #footer
+  background-color: #f0edea  
+  font-size: 12px
   text-align: center
-  margin-top: 3em
-  padding-bottom: 20px
-  font-size: .9em
-  padding-top: 3em
-  background-color: rgb(233, 230, 218)
-  background-color: rgba(233, 230, 218, 0.9)
+  padding-bottom: 10px
+  padding-top: 20px
   overflow: hidden
-  box-shadow: 0 2px 4px #bbb inset
-  section
-    float: left
-  nav
-    float: right
+  //box-shadow: 0 2px 4px #bbb inset
+
+a
+  text-decoration: none
+
+// pages
+.products
+  .col-md-3
+    .block
+      margin: 12px
+      border: 1px solid #DCDEE3
+      background: #FFF
+
     ul
       list-style: none
-      margin: 0
+      li a
+        display: block
+        position: relative
+        padding: 8px 26px 8px 0
+        line-height: 18px
+        color: #666
+        font-size: 14px
+  .col-md-9 
+    .frames
       li
-        float: left
-        margin-left: 2em
-        
-#oferta_footer
-  h1
-    padding-left: 185px
+        display: inline-block
+        height: 200px 
+        width: 200px
+        border: 1px solid red
+        margin-top: 30px
+        margin-left: 20px
+    .categories
+      display: none
+      img
+        height: 300px
+        width: 500px
+      .thumbnails
+        img
+          display: inline-block
+          height: 50px 
+          width: 70px
+          cursor: pointer
 
-/* =Tablet (Portrait)
- *-----------------------------------------------------------------------------
-@media only screen and (min-width: 768px) and (max-width: 959px)
-  .wrapper
-    width: 748px
-
-/* =Mobile (Portrait)
- *-----------------------------------------------------------------------------
-@media only screen and (max-width: 767px)
-  .wrapper
-    width: 300px
-  #header
-    h1
-      float: none
-    nav
-      float: none
-      ul li
-        margin: 0
-        margin-right: 1em
-        font-size: .85em
-  #partners ul li
-    padding-bottom: 1em
-    text-align: center
-  #feedback
-    padding: 1.5em
-  #banner
-    text-align: center
-    margin-bottom: 1.5em
-  #blocks
-    dt, dd
-      float: none
-      width: auto
-  #footer
-    section
-      float: none
-    nav
-      float: none
-      ul
-        margin-top: 1em
-        li
-          margin: 0
-          margin-right: 1em
-
-/* =Mobile (Landscape)
- *-----------------------------------------------------------------------------
-@media only screen and (min-width: 480px) and (max-width: 767px)
-  .wrapper
-    width: 420px
+.racing_team
+  min-height: 400px
+  background-image: url('/images/extendable_main.jpg')

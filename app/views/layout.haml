@@ -8,15 +8,11 @@
     %script{:src => "/vendor/underscore/underscore-min.js"}
     %script{:src => "/vendor/backbone/backbone-min.js"}
     %link{:rel => "stylesheet", :href => "/styles/kube101/css/kube.css"}
+    %link{:rel => "stylesheet", :href => "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css", :integrity => "sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7", :crossorigin => "anonymous"}
     %link{:rel => "stylesheet", :href => "/styles/app.css"}
     %link{:rel => "shortcut icon", :href => "images/favicon.ico", :type => "image/x-icon"}
     %script{:src => "/scripts/app.js"}
   %body
-    .wrapper
-      #header.group
-        %header
-          = partial :header
-        = yield
-      #footer.group
-        %footer
-          = partial :footer
+    #header= partial :header
+    #body.container-fluid= yield
+    #footer= partial :footer

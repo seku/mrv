@@ -36,16 +36,28 @@ class App < Sinatra::Base
     haml :index
   end
 
-  get '/onas' do
-    haml :_onas
+  get '/products' do
+    haml :_products
   end
 
-  get '/oferta' do
-    haml :_oferta
+  get '/special_series' do
+    haml :_special_series
   end
 
-  get '/kontakt' do
-    haml :_kontakt
+  get '/racing_team' do
+    haml :_racing_team
+  end
+
+  get '/contact' do
+    haml :_contact
+  end
+
+  get '/distributors' do
+    haml :_distributors
+  end
+
+  get '/fitment' do
+    haml :_fitment
   end
 
   get '/' do
