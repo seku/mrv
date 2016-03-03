@@ -1,0 +1,17 @@
+common: &common
+  adapter: postgresql
+  host: localhost
+  encoding: unicode
+  pool: 50
+  min_messages: warning
+
+development:
+  database: mrv_development
+  username:
+  password:
+  <<: *common
+
+test:
+  database: mrv_test
+  <<: *common
+
