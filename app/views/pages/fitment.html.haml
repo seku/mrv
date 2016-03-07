@@ -1,15 +1,7 @@
 - content_for :title do
   MRV Fitment
 .row
-  %select
-    %option Yamaha
-    %option Suzuki
-  %select
-    %option Xj
-    %option Fr
-  %select
-    %option 1998
-    %option 2001 
+  %input.search{placeholder: "Type what you are searching for"}
 .row
   %table.table-bordered
     %thead
@@ -29,4 +21,3 @@
         %td XJ
         %td 1994 - 2000
         %td dupa
-
