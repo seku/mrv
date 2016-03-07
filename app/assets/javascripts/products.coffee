@@ -1,35 +1,41 @@
 $(document).ready ->
-  displayCategory = (id) ->
-    $(".categories").hide()
-    $(".categories" + id).show()
-    $(".frames").hide()  
-    $easyzoom = $('.easyzoom').easyZoom()
-    api = $easyzoom.data('easyZoom')
+  initializeEasyZoom = ->
+    unless window.$api  
+      $easyzoom = $('.products .categories.current .easyzoom').easyZoom()
+      window.$api = $easyzoom.data('easyZoom') 
 
-  $(".products .block ul a").click (e) ->
+  teardownEasyZoom = ->
+    if window.$api  
+      window.$api.teardown()
+      window.$api = null           
+
+  displayCategory = (id) ->
+    teardownEasyZoom()
+
+    $(".categories").removeClass("current")
+    $(".categories" + id).addClass("current")
+    $(".navigation_frames").hide()
+
+    initializeEasyZoom() 
+
+    $(".products .categories.current .thumbnails.extendable img").click (e) ->
+      e.preventDefault()
+      small_src = $(this).attr("src")
+      large_src = $(this).data("large")
+      initializeEasyZoom()
+      window.$api.swap(small_src, large_src)
+
+    $(".products .categories.current .thumbnails.static img").click (e) ->
+      e.preventDefault()
+      src = $(this).data("large")
+      teardownEasyZoom()
+      $(".products .categories.current .easyzoom img").attr("src", src)
+
+  $(".products .block ul a").unbind().click (e) ->
     e.preventDefault()
     id = $(this).attr("href")
     displayCategory(id)
 
-  $(".products .frames li").click (e) ->
+  $(".products .navigation_frames li").unbind().click (e) ->
     id = $(this).attr('id')
     displayCategory("##{id}")
-
-  $(".products .thumbnails.extendable img").click (e) ->
-    e.preventDefault()
-    small_src = $(this).attr("src")
-    large_src = $(this).data("zoom-image")
-    main = $(".products .categories:visible .main_img:visible")
-    main.attr("src", small_src)
-    main.attr("data-zoom-image", large_src)
-    main.unbind().removeData()
-
-  $(".products .thumbnails.static img").click (e) ->
-    e.preventDefault()
-    src = $(this).attr("src")
-    main = $(".products .categories:visible .main_img:visible")
-    main.attr("src", src)
-
-  # easyzoom.js
-  # $easyzoom = $('.easyzoom').easyZoom()
-  # api = $easyzoom.data('easyZoom')

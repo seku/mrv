@@ -23,7 +23,7 @@
       %a(href="/fitment")
         Fitment
   .col-md-9    
-    %ul.frames
+    %ul.navigation_frames
       %li#short 
         short levers
         %img{src: "/assets/short_l_main.jpg"}
@@ -44,19 +44,19 @@
         %a{:href => '/assets/short_l_main.jpg'}
           %img.preview{:src => '/assets/short_l_main.jpg'} 
       .thumbnails.extendable
-        %img{:src => '/assets/short_s_main.jpg'}
-        %img{:src => '/assets/short_s_tech_1.jpg'}
-        %img{:src => '/assets/short_s_tech_2.jpg'}
-        %img{:src => '/assets/short_s_tech_3.jpg'}
+        %img{:src => '/assets/short_s_main.jpg', 'data-large' => '/assets/short_l_main.jpg'}
+        %img{:src => '/assets/short_s_tech_1.jpg', 'data-large' => '/assets/short_l_tech_1.jpg'}
+        %img{:src => '/assets/short_s_tech_2.jpg', 'data-large' => '/assets/short_l_tech_2.jpg'}
+        %img{:src => '/assets/short_s_tech_3.jpg', 'data-large' => '/assets/short_l_tech_3.jpg'}
       .thumbnails.static
-        %img{:src => '/assets/short_s_1.jpg'}
-        %img{:src => '/assets/short_s_2.jpg'}
-        %img{:src => '/assets/short_s_3.jpg'}
-        %img{:src => '/assets/short_s_4.jpg'}
-        %img{:src => '/assets/short_s_5.jpg'}
-        %img{:src => '/assets/short_s_6.jpg'}
-        %img{:src => '/assets/short_s_7.jpg'}
-        %img{:src => '/assets/short_s_8.jpg'}
+        %img{:src => '/assets/short_s_1.jpg', 'data-large' => '/assets/short_l_1.jpg'}
+        %img{:src => '/assets/short_s_2.jpg', 'data-large' => '/assets/short_l_2.jpg'}
+        %img{:src => '/assets/short_s_3.jpg', 'data-large' => '/assets/short_l_3.jpg'}
+        %img{:src => '/assets/short_s_4.jpg', 'data-large' => '/assets/short_l_4.jpg'}
+        %img{:src => '/assets/short_s_5.jpg', 'data-large' => '/assets/short_l_5.jpg'}
+        %img{:src => '/assets/short_s_6.jpg', 'data-large' => '/assets/short_l_6.jpg'}
+        %img{:src => '/assets/short_s_7.jpg', 'data-large' => '/assets/short_l_7.jpg'}
+        %img{:src => '/assets/short_s_8.jpg', 'data-large' => '/assets/short_l_8.jpg'}
       • SHORT LEVERS 
       The best for motorcycle races – giving you extra speed to operate a brake and a clutch in your motorcycle (operated with 2 fingers)
 
@@ -81,10 +81,10 @@
         %a{:href => '/assets/extendable_l_main.jpg'}
           %img.preview{:src => '/assets/extendable_main.jpg'} 
       .thumbnails.extendable
-        %img{:src => '/assets/extendable_main.jpg', "data-zoom-image" => '/assets/extendable_main.jpg'}
-        %img{:src => '/assets/extendable_tech_1.jpg', "data-zoom-image" => '/assets/extendable_tech_1.jpg'}
-        %img{:src => '/assets/extendable_tech_2.jpg', "data-zoom-image" => '/assets/extendable_tech_2.jpg'}
-        %img{:src => '/assets/extendable_tech_3.jpg', "data-zoom-image" => '/assets/extendable_tech_3.jpg'}
+        %img{:src => '/assets/extendable_main.jpg', "data-large" => '/assets/extendable_main.jpg'}
+        %img{:src => '/assets/extendable_tech_1.jpg', "data-large" => '/assets/extendable_tech_1.jpg'}
+        %img{:src => '/assets/extendable_tech_2.jpg', "data-large" => '/assets/extendable_tech_2.jpg'}
+        %img{:src => '/assets/extendable_tech_3.jpg', "data-large" => '/assets/extendable_tech_3.jpg'}
       .thumbnails.static
         %img{:src => '/assets/short_s_main.jpg'}
         %img{:src => '/assets/logo.png'}
@@ -114,6 +114,5 @@
     .row.categories#special
       %img{:src => '/assets/logo.png'}
       Special series
-
 
 = javascript_include_tag("products")
