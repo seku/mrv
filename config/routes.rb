@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
   get "/products", to: "pages#products"
   get "/home", to: "pages#home"
   get "/distributors", to: "pages#distributors"
