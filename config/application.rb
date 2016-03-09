@@ -22,5 +22,6 @@ module MrvRails
 
     # Do not swallow errors in after_commit/after_rollback callbacks.
     config.active_record.raise_in_transactional_callbacks = true
+    config.less.paths << File.join(Rails.root, 'app', 'assets', 'less')
   end
 end
