@@ -5,6 +5,5 @@ Rails.application.routes.draw do
   get "/distributors", to: "pages#distributors"
   get "/fitment", to: "pages#fitment"
   get "/racing_team", to: "pages#racing_team"
-  get "/contact", to: "pages#contact"
   root 'pages#home'
 end

@@ -12,7 +12,20 @@
     %a(href="/distributors")
       %p Distributors
   %li{class: is_current?("contact")} 
-    %a(href="/contact")
+    %a.show_contact_dialog(href="/")
       %p Contact
 
 © 2016 MRV-RACING All rights reserved.
+
+#dialog
+  %a(href="mailto:office@mrv-racing") office@mrv-racing 
+  %a(href="mailto:mrv-racing-team@mrv-racing") mrv-racing-team@mrv-racing
+
+:javascript
+  $(document).ready(function() {
+    $("#dialog").dialog({ autoOpen: false });
+    $('.show_contact_dialog').click(function (e) {
+      e.preventDefault();
+      $('#dialog').dialog('open');
+    });
+  });
