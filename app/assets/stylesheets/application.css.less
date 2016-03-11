@@ -1,103 +1,26 @@
-@import "_dialog";
-@import "_distributors";
-@import "_fitment";
-@import "_products";
-@import "_racing_team";
-@import "vendor/easyzoom";
+// Import theme
+@import "themes/default/_colors";
+@import "themes/default/_variables";
+@import "themes/_scaffolding";
 
-#header {
-  position: fixed;
-  top: 0;
-  left: 0;
-  text-decoration: none;
-  margin-bottom: .6em;
-  padding: 5px 20px 0 20px;
-  background-color: white;
-  width: 100%;
-  z-index: 1;
-  box-shadow: 2px 2px 4px rgba(83,100,122,.35);
-  img {
-    height: 70px;
-    width: 140px;
-    margin-top: 3px;
-    margin-bottom: 5px;
-  }
-  nav {
-    float: right;
-    padding-top: 35px;
-    ul {
-      margin: 0;
-      list-style: none;
-      overflow: hidden;
-      text-transform: uppercase;
-      font-family: Helvetica, Arial, Sans-serif;
-      font-size: 12px;
-      li {
-        float: left;
-        margin-left: 2em;
-        a {
-          text-decoration: none;
-          color: #000;
-          color: rgb(0, 0, 0);
-          color: rgba(0, 0, 0, 0.8);
-          &:hover {
-            color: red;
-          }
-        }
-        &.current {
-          margin-top: -3px;
-          a {
-            font-weight: bold;
-            font-size: 14px;
-          }
-        }
-      }
-    }
-  }
-}
+// Pages layout
+@import "pages/_distributors";
+@import "pages/_fitment";
+@import "pages/_products";
+@import "pages/_racing_team";
+
+// Components
+@import "components/_dialog";
+@import "components/_header";
+@import "components/_footer";
+
+// Vendor
+@import "vendor/easyzoom";
 
 #body {
   margin-top: 83px;
   min-height: 300px;
   background-color: #f0edea;
-}
-#footer {
-  background-color: #f0edea;  
-  font-size: 12px;
-  text-align: center;
-  padding-bottom: 10px;
-  padding-top: 20px;
-  overflow: hidden;
-
-  ul {
-    width: 600px;
-    margin: auto;
-    list-style: none;
-    overflow: hidden;
-    text-transform: uppercase;
-    font-family: Helvetica, Arial, Sans-serif;
-    font-size: 12px;
-    li {
-      float: left;
-      margin-left: 2em;
-      a {
-        text-decoration: none;
-        color: #000;
-        color: rgb(0, 0, 0);
-        color: rgba(0, 0, 0, 0.8);
-        &:hover {
-          color: red;
-        }
-      }
-      &.current {
-        margin-top: -3px;
-        a {
-          font-weight: bold;
-          font-size: 14px;
-        }
-      }
-    }
-  }
 }
 a {
   text-decoration: none;
