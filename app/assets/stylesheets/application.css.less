@@ -1,18 +1,25 @@
+// Normalize browsers styles
+@import "vendor/normalize";
+
+// Import mixins
+@import "mixins/_clearfix";
+@import "mixins/_container";
+
 // Import theme
 @import "themes/default/_colors";
 @import "themes/default/_variables";
 @import "themes/_scaffolding";
+
+// Components
+@import "components/_dialog";
+@import "components/_header";
+@import "components/_footer";
 
 // Pages layout
 @import "pages/_distributors";
 @import "pages/_fitment";
 @import "pages/_products";
 @import "pages/_racing_team";
-
-// Components
-@import "components/_dialog";
-@import "components/_header";
-@import "components/_footer";
 
 // Vendor
 @import "vendor/easyzoom";
