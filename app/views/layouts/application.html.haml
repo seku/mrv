@@ -6,6 +6,6 @@
     = javascript_include_tag 'application'
     = csrf_meta_tags
   %body
-    #header= render "header"
+    %header.header-top= render "header"
     #body.container-fluid{class: "#{controller.action_name}"}= yield
     #footer= render "footer"

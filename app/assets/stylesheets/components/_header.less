@@ -1,3 +1,29 @@
+header.header-top {
+	&:extend(.clearfix);
+	position: fixed;
+	top: 0; left: 0;
+	width: 100%;
+	padding: 10px 0 10px 0;
+	background-color: @white;
+	z-index: @z-index-header;
+
+	.brand-logo {
+		display: block;
+		float: left;
+		img {
+			display: inline-block;
+			width: 128px; height: 65px;
+			vertical-align: middle;
+		}
+	}
+
+	.header-menu {
+		display: block;
+		float: right;
+	}
+}
+
+
 #header {
 	position: fixed;
 	top: 0;
