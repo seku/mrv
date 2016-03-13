@@ -1,0 +1,31 @@
+.btn {
+	display: inline-block;
+	text-align: center;
+	text-transform: uppercase;
+	cursor: pointer;
+	vertical-align: middle;
+	white-space: nowrap;
+	margin-bottom: 1em;
+	padding: 1em 3em;
+	background-image: none;
+	background-color: transparent;
+	border: 2px solid transparent;
+
+	&:hover,
+	&:focus {
+		text-decoration: none;
+	}
+
+	&:active,
+	&.active {
+		outline: 0;
+		background-image: none;
+	}
+
+	&[disabled],
+	&.disabled {
+		cursor: not-allowed;
+		pointer-events: none;
+		opacity: .65;
+	}
+}
