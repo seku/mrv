@@ -8,6 +8,6 @@
     = csrf_meta_tags
   %body
     %header.header-top= render "header"
-    #body.container-fluid{class: "#{controller.action_name}"}= yield
+    %section.main-content{:class => "#{controller.action_name}"}= yield
     #footer= render "footer"
     = javascript_include_tag 'application'

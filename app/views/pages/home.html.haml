@@ -1,9 +1,11 @@
 - content_for :title do
   MRV Performance and Emotions
-.row
-  %img.main{:src => '/assets/main.jpg'}
-.row
-  %h2 MRV-RACING levers
-  %p designed with perfection
-  %p produced for races
-  %p improved to last forever
+.hero
+  .hero-images
+    .image{:style => 'background-image: url(/assets/hero/hero-images-01.jpg);'}
+    / .image{:style => 'background-image: url(/assets/hero/hero-images-02.jpg);'}
+  .hero-text
+    %h2 MRV-RACING levers
+    %p designed with <strong>perfection</strong> produced for <strong>races</strong>
+    %p improved to last forever
+    %a.btn.btn-lines(href="/products") Learn more
