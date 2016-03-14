@@ -1,0 +1,36 @@
+// .hero-scale-top,
+// .hero-scale-bottom {
+// 	opacity: 0;
+// 	transform: scale(1);
+// 	animation-name: backgroundMove;
+// 	animation-duration: 6s;
+// 	animation-timing-function: linear;
+// 	animation-play-state: paused;
+
+// 	&.animate {
+// 		animation-iteration-count: 1;
+// 		animation-play-state: running;
+// 	}
+// }
+
+// .hero-scale-top { background-position: 50% 0%; }
+// .hero-scale-bottom { background-position: 50% 100%; }
+
+// @keyframes backgroundMove {
+// 	10% { opacity: .5; }
+// 	90% { opacity: .5; }
+// 	100% {
+// 		opacity: 0;
+// 		background-position: 50% 50%;
+// 		transform: scale(1.2);
+// 	}
+// }
+
+.image {
+	opacity: 0;
+	transition: opacity 1s;
+
+	&.show {
+		opacity: 1;
+	}
+}
