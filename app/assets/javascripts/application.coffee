@@ -2,14 +2,14 @@
 #= require turbolinks
 #= require "vendor/easyzoom.js"
 
-$(document).ready ->
-	setInterval (->
-		$current = $('.hero-images .show')
-		$next = if $current.next().length > 0 then $current.next() else $current.siblings().first()
-		$current.removeClass 'show'
-		$next.addClass 'show'
-		return
-	), 6000
+# $(document).ready ->
+# 	setInterval (->
+# 		$current = $('.hero-images .show')
+# 		$next = if $current.next().length > 0 then $current.next() else $current.siblings().first()
+# 		$current.removeClass 'show'
+# 		$next.addClass 'show'
+# 		return
+# 	), 6000
 
 	# .hero-scale-top
 	# $('.hero-images .image').first().addClass('animate');
@@ -30,4 +30,4 @@ $(document).ready ->
 	# 	$image.toggleClass 'show animate'
 	# 	$next.toggleClass 'show animate'
 	# 	return false
-	return
+	# return
