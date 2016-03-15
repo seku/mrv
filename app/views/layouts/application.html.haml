@@ -10,5 +10,5 @@
   %body
     %header.header-top= render "header"
     %section.main-content{:class => "#{controller.action_name}"}= yield
-    #footer= render "footer"
-    
+    %section.footer= render "footer"
+

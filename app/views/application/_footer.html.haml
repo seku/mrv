@@ -1,25 +1,27 @@
-%ul
-  %li{class: is_current?("home")}
-    %a(href="/")
-      %p Home
-  %li{class: is_current?("products")}
-    %a(href="/products")
-      %p Products
-  %li{class: is_current?("racing_team")}
-    %a(href="/racing_team")
-      %p Racing Team
-  %li{class: is_current?("distributors")}
-    %a(href="/distributors")
-      %p Distributors
-  %li{class: is_current?("contact")}
-    %a.show_contact_dialog(href="/")
-      %p Contact
+.container
+  %ul.list-inline.footer-menu
+    %li{class: is_current?("home")}
+      %a(href="/")
+        %p Home
+    %li{class: is_current?("products")}
+      %a(href="/products")
+        %p Products
+    %li{class: is_current?("racing_team")}
+      %a(href="/racing_team")
+        %p Racing Team
+    %li{class: is_current?("distributors")}
+      %a(href="/distributors")
+        %p Distributors
+    %li{class: is_current?("contact")}
+      %a.show_contact_dialog(href="/")
+        %p Contact
 
-© 2016 MRV-RACING All rights reserved.
+  %p.footer-copyright
+    &copy; 2016 MRV-RACING All rights reserved.
 
-#dialog
-  %a(href="mailto:office@mrv-racing") office@mrv-racing
-  %a(href="mailto:mrv-racing-team@mrv-racing") mrv-racing-team@mrv-racing
+  #dialog
+    %a(href="mailto:office@mrv-racing") office@mrv-racing
+    %a(href="mailto:mrv-racing-team@mrv-racing") mrv-racing-team@mrv-racing
 
 :javascript
   $(document).ready(function() {
