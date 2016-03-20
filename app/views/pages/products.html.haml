@@ -1,25 +1,27 @@
 - content_for :title do
   MRV-RACING Products
 
-.container
-  .navigator
+.navigator
+  .container
+    %h3.navigator-title Choose your levers
     %ul.list-inline
       %li
-        %a(href="#short")
+        %a.btn.btn-lines-gray(href="#short")
           short levers
       %li
-        %a(href="#long")
+        %a.btn.btn-lines-gray(href="#long")
           long levers
       %li
-        %a(href="#extendable")
+        %a.btn.btn-lines-gray(href="#extendable")
           extendable and foldable levers
       %li
-        %a(href="#three_d")
+        %a.btn.btn-lines-gray(href="#three_d")
           3D levers
       %li
-        %a(href="#special")
+        %a.btn.btn-lines-gray(href="#special")
           special series
 
+.container
   %section#short.product-info
     .content
       %h2.title
@@ -50,6 +52,48 @@
       %button.btn.btn-lines-lust Show details
     .thumbnail
       %img{src: "/assets/products/long_l_main.jpg"}
+
+  %section#extendable.product-info
+    .content
+      %h2.title
+        Extendable and foldable levers
+      %p
+        Foldable and extendable levers are the best choice for the motorcycle riders who use motorcycle for races, commuting and travelling. They give you an option to adjust them depending on occasion or particular preferences (operated with 2-4 fingers)
+        In case of falling off they fold preventing from getting broken.
+
+        The highest grade levers used on motorcycle races
+        The best design and improved features
+        Anodizing process of 16 phases
+        The highest precision of full CNC cutting
+        6 positions to adjust the levers you your individual preferences
+        The best levers ever by MRV-RACING
+      %button.btn.btn-lines-lust Show details
+    .thumbnail
+      %img{src: "/assets/products/extendable_l_main.jpg"}
+
+  %section#three_d.product-info
+    .content
+      %h2.title
+        3d levers
+      %p
+        3d levers are the newest design with 3D surface preventing from slippery. The special hole releases the wind pressure while riding or racing .The is best replacement of the levers to tune your motorcycle (operated with 3-4 fingers)
+
+        The highest grade levers used on motorcycle races
+        The best design and improved features
+        Anodizing process of 16 phases
+        The highest precision of full CNC cutting
+        6 positions to adjust the levers you your individual preferences
+        The best levers ever by MRV-RACING
+      %button.btn.btn-lines-lust Show details
+    .thumbnail
+      %img{src: "/assets/products/3d_l_main.jpg"}
+
+  %section#special.product-info.centered
+    .content
+      %h2.title
+        Special series
+      %p
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Unde, adipisci. Minus voluptatum accusantium delectus molestias, facere quia dolore placeat veniam atque ratione eum, aliquam cum. Itaque beatae iste temporibus! Modi voluptate vel sit aliquid laborum cupiditate harum praesentium officiis. Ex commodi quos numquam, ducimus ipsum quo, maxime labore magnam recusandae?
 
 .row
   .col-md-3
