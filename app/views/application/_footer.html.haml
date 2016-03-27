@@ -13,21 +13,24 @@
       %a(href="/distributors")
         %p Distributors
     %li{class: is_current?("contact")}
-      %a.show_contact_dialog(href="/")
+      %a.js-open-dialog(href="#" data-dialog-id="dialog-contact")
         %p Contact
 
   %p.footer-copyright
     &copy; 2016 MRV-RACING All rights reserved.
 
-  #dialog
-    %a(href="mailto:office@mrv-racing") office@mrv-racing
-    %a(href="mailto:mrv-racing-team@mrv-racing") mrv-racing-team@mrv-racing
+#dialog-contact.dialog.dialog-small= render "dialog_contact"
+:coffee
+  $(document).ready ->
+    $('[data-dialog-id]').on 'click', (_event) ->
+      _event.preventDefault()
 
-:javascript
-  $(document).ready(function() {
-    $("#dialog").dialog({ autoOpen: false });
-    $('.show_contact_dialog').click(function (e) {
-      e.preventDefault();
-      $('#dialog').dialog('open');
-    });
-  });
+      $dialog = $('#' + $(this).attr('data-dialog-id'))
+      $dialog.addClass('open');
+
+      # Bind close events
+      $dialog.find('.dialog-background, .js-dialog-close').one 'click', ->
+        $dialog.removeClass('open');
+        return
+
+      return
