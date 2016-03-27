@@ -32,6 +32,19 @@ textarea {
 	line-height: inherit;
 }
 
+h1, h2, h3, h4, h5, h6 {
+	text-transform: uppercase;
+}
+
+a {
+	color: @lust;
+	text-decoration: none;
+
+	&:hover {
+		color: lighten(@lust, 20%);
+	}
+}
+
 .container {
 	.container-fixed();
 
@@ -48,4 +61,8 @@ textarea {
 
 .main-content {
 	margin-top: 100px; // height of header
+}
+
+.top-padding {
+	padding-top: (@grid-gutter-width / 2);
 }
