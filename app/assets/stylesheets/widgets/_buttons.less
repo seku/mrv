@@ -65,3 +65,15 @@
 		background-color: @lust;
 	}
 }
+
+.btn-zircon {
+	&:extend(.btn-lines);
+	background-color: @zircon;
+	border-color: darken(@zircon, 10%);
+
+	&:hover {
+		color: @white;
+		background-color: @black;
+		border-color: @black;
+	}
+}

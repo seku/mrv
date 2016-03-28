@@ -1,21 +1,29 @@
 .main-content.products {
-	border-top: 1px solid #DCDEE3;
+	margin-top: 200px;
 }
 
 .navigator {
-	padding: 2.25em 0;
-	margin-bottom: 3em;
-	text-align: center;
+	position: fixed;
+	top: 100px; left: 0; right: 0;
+	padding: 1em 0;
+	text-align: left;
 	text-transform: uppercase;
-	border-bottom: 1px solid #DCDEE3;
+	border-top: 1px solid @zircon;
+	border-bottom: 2px solid @zircon;
+	background-color: @white;
 
-	.navigator-title {
-		font-size: 2em;
+	.levers-type {
+		display: inline-block;
+	}
+
+	.fitment {
+		float: right;
 	}
 
 	a {
 		color: @ship-gray;
 		text-decoration: none;
+		margin-bottom: 0;
 	}
 }
 
