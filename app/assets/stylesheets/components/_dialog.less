@@ -5,10 +5,11 @@
 	top: 0; right: 0; bottom: 0; left: 0;
 	text-align: center;
 	opacity: 0;
+	font-size: 1.15rem;
 	z-index: @z-index-dialog;
 	transition-property: opacity, visibility;
-	transition-duration: @transition-duration-normal, 0;
-	transition-delay: 0, @transition-duration-normal;
+	transition-duration: @transition-duration-fast, 0;
+	transition-delay: 0, @transition-duration-fast;
 
 	&:before {
 		content: '';
@@ -26,8 +27,14 @@
 	}
 
 	.dialog-title {
+		font-size: 1.5rem;
 		margin: .75em 0;
 		padding: 0 64px;
+
+		&.left {
+			text-align: left;
+			padding: 0;
+		}
 	}
 
 	.js-dialog-close {
@@ -56,7 +63,7 @@
 		border-radius: @border-radius-normal;
 		background: @white;
 		z-index: (@z-index-dialog - 1);
-		transform: translateY(-100%);
+		transform: scale(.9);
 		transition: transform @transition-duration-normal ease-out;
 		box-shadow: 0px 0px 12px 0px rgba(0, 0, 0, 0.5);
 
@@ -72,13 +79,14 @@
 		transition-delay: 0;
 
 		.dialog-wrapper {
-			transform: translateY(0);
+			transform: scale(1);
 		}
 	}
 
 	&.dialog-full {
 		.dialog-wrapper {
-			width: 100%; height: 100%;
+			max-width: 90%;
+			max-height: 90%;
 		}
 	}
 
@@ -86,6 +94,53 @@
 		.dialog-wrapper {
 			width: 45%;
 			max-height: 50%;
+		}
+	}
+}
+
+.dialog-gallery {
+	.clearfix();
+
+	.preview {
+		float: left;
+		display: block;
+		max-height: 80%;
+		max-width: 60%;
+		padding-right: (@grid-gutter-width / 2);
+	}
+
+	.thumbnails {
+		text-align: left;
+		float: right;
+		width: 40%;
+
+		ul {
+			font-size: 0;
+			text-align: left;
+			list-style: none;
+			margin: 0;
+			padding: 0;
+
+			li {
+				cursor: pointer;
+				position: relative;
+				display: inline-block;
+				width: 90px; height: 64px;
+				margin: 3px;
+				border: 1px solid @zircon;
+
+				&.active {
+					border-color: @lust;
+				}
+
+				img {
+					position: absolute;
+					top: 0; right: 0; bottom: 0; left: 0;
+					margin: auto;
+					max-width: 100%;
+					max-height: 100%;
+				}
+			}
 		}
 	}
 }
