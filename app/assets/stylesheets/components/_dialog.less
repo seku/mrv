@@ -11,6 +11,10 @@
 	transition-duration: @transition-duration-fast, 0;
 	transition-delay: 0, @transition-duration-fast;
 
+	.bigger-text {
+		font-size: 1.5em;
+	}
+
 	&:before {
 		content: '';
 		display: inline-block;
@@ -57,7 +61,7 @@
 	.dialog-wrapper {
 		position: relative;
 		display: inline-block;
-		min-height: 280px;
+		min-height: 250px;
 		vertical-align: middle;
 		padding: (@grid-gutter-width / 2);
 		border-radius: @border-radius-normal;
