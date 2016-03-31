@@ -5,16 +5,16 @@
   .container
     %ul.list-inline.levers-type
       %li
-        %a.btn.btn-lines-gray(href="#short")
+        %a.btn.btn-lines-gray.js-scrollto(href="#short")
           short levers
       %li
-        %a.btn.btn-lines-gray(href="#long")
+        %a.btn.btn-lines-gray.js-scrollto(href="#long")
           long levers
       %li
-        %a.btn.btn-lines-gray(href="#extendable")
+        %a.btn.btn-lines-gray.js-scrollto(href="#extendable")
           extendable and foldable levers
       %li
-        %a.btn.btn-lines-gray(href="#three_d")
+        %a.btn.btn-lines-gray.js-scrollto(href="#three_d")
           3D levers
     %a.btn.btn-zircon.btn-fitment(href="/fitment")
       Fitment
@@ -90,3 +90,12 @@
     #3d-levers.dialog.dialog-full= render "dialogs/threed"
 
 = javascript_include_tag("products")
+
+:coffee
+  $(document).ready ->
+    $('.js-scrollto').on 'click', (_event) ->
+      _event.preventDefault()
+      $this = $(this)
+      $element = $($this.attr('href'));
+      offset = $element.offset().top - 200
+      $('html, body').animate { scrollTop: offset }, 400
