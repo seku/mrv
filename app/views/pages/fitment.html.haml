@@ -26,7 +26,12 @@
   $(".search input").autocomplete({
     minLength: 2,
     appendTo: "#autocomplete",
-    source: handles,
+    source: function (request, response) {
+      var matcher = new RegExp($.ui.autocomplete.escapeRegex(request.term), "i");
+      response($.grep(handles, function(value) {
+        return matcher.test(value.fake);
+      }));
+    },
     select: function (event, ui) {
       var selected = $("#" + ui.item.code);
       var offset = selected.offset().top - 180;
