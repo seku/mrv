@@ -1,12 +1,10 @@
 namespace :parse do
   task categories: :environment do
-    raise ArgumentError("No file path") if ENV["path"].blank?
-
     added   = []
     invalid = []
     skipped = []
 
-    CSV.foreach(ENV["path"], col_sep: ";", headers: true) do |row|
+    CSV.foreach(File.expand_path("../../../db/models.csv", __FILE__), col_sep: ";", headers: true) do |row|
       code = row[1]
       make = row[2]
       kind = row[3]

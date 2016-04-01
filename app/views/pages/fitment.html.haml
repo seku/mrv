@@ -1,32 +1,40 @@
 - content_for :title do
   MRV Fitment
-.row.search
-  .col-md-6
+
+.search
+  .container
     %input{placeholder: "Type what you are searching for"}
-  .col-md-6
-    %button.reset Reset
+    %button.reset.btn.btn-small.btn-lines-lust Reset
+    #autocomplete.autocomplete-holder
 
-.row
-  .col-md-3 Make
-  .col-md-3 Model
-  .col-md-3 Year
-  .col-md-3 Code
+.container
+  .row.header
+    .quarter Make
+    .quarter Model
+    .quarter Year
+    .quarter Code
 
-- @handles.each do |handle|
-  .row.handle{id: handle.humanized_code}
-    .col-md-3= handle.make
-    .col-md-3= handle.kind
-    .col-md-3= handle.years
-    .col-md-3= handle.code
+  - @handles.each do |handle|
+    .row.handle{id: handle.humanized_code}
+      .quarter= handle.make
+      .quarter= handle.kind
+      .quarter= handle.years
+      .quarter= handle.code
 
 :javascript
   var handles = #{@handles_for_js}
   $(".search input").autocomplete({
     minLength: 2,
-    source: handles,
+    appendTo: "#autocomplete",
+    source: function (request, response) {
+      var matcher = new RegExp($.ui.autocomplete.escapeRegex(request.term), "i");
+      response($.grep(handles, function(value) {
+        return matcher.test(value.fake);
+      }));
+    },
     select: function (event, ui) {
       var selected = $("#" + ui.item.code);
-      var offset = selected.offset().top - 100;
+      var offset = selected.offset().top - 180;
       $(".row.handle").removeClass("current");
       selected.addClass("current");
       $("html, body").animate({ scrollTop: offset}, 100);

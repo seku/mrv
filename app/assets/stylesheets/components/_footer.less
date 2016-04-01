@@ -1,0 +1,40 @@
+section.footer {
+	padding: 3.25rem 0 2.15rem 0;
+	color: @white;
+	font-size: 1.15em;
+	background-color: lighten(@black, 10%);
+	box-shadow: inset 0px 15px 26px -10px @black;
+}
+
+.footer-menu {
+	text-align: center;
+	margin-bottom: 1.25rem;
+
+	li {
+		margin-left: 1.15rem;
+		margin-right: 1.15rem;
+
+		a {
+			color: @white;
+			font-size: 1.15rem;
+			text-decoration: none;
+			text-transform: uppercase;
+			transition: color @transition-duration-fast;
+
+			&:hover {
+				color: @lust;
+			}
+		}
+	}
+}
+
+.footer-copyright {
+	color: lighten(@ship-gray, 20%);
+	font-size: 1rem;
+	text-align: center;
+}
+
+// TODO
+#dialog {
+	display: none;
+}

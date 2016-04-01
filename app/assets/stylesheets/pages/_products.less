@@ -1,0 +1,164 @@
+.main-content.products {
+	margin-top: 200px;
+}
+
+.navigator {
+	position: fixed;
+	top: 100px; left: 0; right: 0;
+	padding: 1em 0;
+	text-align: left;
+	text-transform: uppercase;
+	border-top: 1px solid @zircon;
+	border-bottom: 2px solid @zircon;
+	background-color: @white;
+
+	.levers-type {
+		display: inline-block;
+	}
+
+	.btn-fitment {
+		float: right;
+	}
+
+	a {
+		color: @ship-gray;
+		text-decoration: none;
+		margin-bottom: 0;
+	}
+}
+
+section.product-info {
+	.clearfix();
+	margin-bottom: 60px;
+
+	.content {
+		.title {
+			font-size: 2.5em;
+			text-transform: uppercase;
+			letter-spacing: @letter-spacing-wider;
+			margin-top: 2.25em;
+		}
+
+		p {
+			line-height: 1.5;
+			font-size: 1em;
+		}
+
+		.btn {
+			margin-top: 1.25em;
+		}
+	}
+
+	.thumbnail img {
+		display: block;
+		width: 100%;
+		max-width: 100%;
+		height: auto;
+	}
+
+	&:nth-of-type(even) {
+		.content {
+			float: right;
+			width: 45%;
+			padding-left: (@grid-gutter-width / 2);
+		}
+
+		.thumbnail {
+			float: left;
+			width: 55%;
+			padding-right: (@grid-gutter-width / 2);
+		}
+	}
+
+	&:nth-of-type(odd) {
+		.content {
+			float: left;
+			width: 45%;
+			padding-right: (@grid-gutter-width / 2);
+		}
+
+		.thumbnail {
+			float: right;
+			width: 55%;
+			padding-left: (@grid-gutter-width / 2);
+		}
+	}
+
+	&.centered {
+		text-align: center;
+
+		.content {
+			float: none;
+			width: 60%;
+			margin: 0 auto;
+		}
+
+		.thumbnail {
+			display: none;
+		}
+	}
+}
+
+.products {
+	.col-md-3 {
+		.block {
+			margin: 12px;
+			border: 1px solid #DCDEE3;
+			background: #FFF;
+		}
+		ul {
+			list-style: none;
+			li a {
+				display: block;
+				position: relative;
+				padding: 8px 26px 8px 0;
+				line-height: 18px;
+				color: #666;
+				font-size: 14px;
+			}
+		}
+	}
+	.col-md-9 {
+		.navigation_frames {
+			li {
+				cursor: pointer;
+				display: inline-block;
+				height: 200px;
+				width: 200px;
+				border: 1px solid red;
+				margin-top: 30px;
+				margin-left: 20px;
+				img {
+					height: 180px;
+					width: 180px;
+				}
+			}
+		}
+		.categories {
+			display: none;
+			&.current {
+				display: block;
+			}
+
+			.preview {
+				height: 300px;
+				width: 500px;
+			}
+			.thumbnails {
+				img {
+					display: inline-block;
+					height: 50px;
+					width: 70px;
+					cursor: pointer;
+				}
+			}
+		}
+	}
+	.easyzoom {
+		position: relative;
+		display: inline-block;
+		img {
+			vertical-align: bottom;
+		}
+	}
+}

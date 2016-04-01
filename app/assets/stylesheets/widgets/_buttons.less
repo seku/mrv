@@ -1,0 +1,84 @@
+.btn {
+	display: inline-block;
+	text-align: center;
+	text-transform: uppercase;
+	cursor: pointer;
+	vertical-align: middle;
+	white-space: nowrap;
+	margin-bottom: 1em;
+	padding: 1em 3em;
+	background-image: none;
+	background-color: transparent;
+	border: 2px solid transparent;
+
+	&:hover,
+	&:focus {
+		text-decoration: none;
+	}
+
+	&:active,
+	&.active {
+		outline: 0;
+		background-image: none;
+	}
+
+	&[disabled],
+	&.disabled {
+		cursor: not-allowed;
+		pointer-events: none;
+		opacity: .65;
+	}
+}
+
+.btn-lines {
+	color: @white;
+	text-decoration: none;
+	border: 2px solid @white;
+	padding: 1em 1.75em;
+	border-radius: @border-radius-normal;
+	transition: background, color, border;
+	transition-duration: @transition-duration-fast;
+
+	&:hover {
+		color: @black;
+		background-color: @white;
+	}
+}
+
+.btn-lines-gray {
+	&:extend(.btn-lines);
+	color: @ship-gray;
+	border-color: transparent;
+
+	&:hover {
+		border-color: @ship-gray;
+	}
+}
+
+.btn-lines-lust {
+	&:extend(.btn-lines);
+	color: @lust;
+	border-color: @lust;
+
+	&:hover {
+		color: @white;
+		background-color: @lust;
+	}
+}
+
+.btn-zircon {
+	&:extend(.btn-lines);
+	background-color: @zircon;
+	border-color: darken(@zircon, 10%);
+
+	&:hover {
+		color: @white;
+		background-color: @black;
+		border-color: @black;
+	}
+}
+
+.btn-small {
+	font-size: .75em;
+	padding: .75em 1.25em;
+}

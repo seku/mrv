@@ -1,0 +1,42 @@
+// Fonts
+@font-size-base: 14px;
+@font-family-base: "Lato", Helvetica, Arial, sans-serif;
+
+@letter-spacing-small: -(25 / 1000em);
+@letter-spacing-wider:  (25 / 1000em );
+
+// Border radius
+@border-radius-small: .15em;
+@border-radius-normal: .45em;
+@border-radius-large: .75em;
+
+// Hamburger icon
+@hamburger-line-width: 2.25em;
+@hamburger-line-height: .25em;
+@hamburger-line-radius: @border-radius-small;
+
+// Animations & transition timing
+@transition-duration-fast: .2s;
+@transition-duration-normal: .4s;
+@transition-duration-slow: .8s;
+
+// Screen size
+@screen-xs-min: 480px;
+@screen-sm-min: 768px;
+@screen-md-min: 992px;
+@screen-lg-min: 1200px;
+
+// Gutter size
+@grid-gutter-width: 30px;
+
+// Breakpoints
+@grid-float-breakpoint: @screen-md-min;
+
+// Container size
+@container-sm: ((720px + @grid-gutter-width));
+@container-md: ((940px + @grid-gutter-width));
+@container-lg: ((1140px + @grid-gutter-width));
+
+// z-index
+@z-index-header: 10;
+@z-index-dialog: (@z-index-header * 2);

@@ -7,8 +7,9 @@ class PagesController < ApplicationController
   def fitment
     @handles_for_js = Handle.all.map do |h| 
       {
-        value: "#{h.make} #{h.kind} #{h.code}",
-        label: "#{h.make} #{h.kind}",
+        fake: "#{h.make} #{h.kind} #{h.years} #{h.fake}",
+        value: "#{h.make} #{h.kind} #{h.years}",
+        label: "#{h.make} #{h.kind} #{h.years}",
         code: h.humanized_code
       }
     end.to_json

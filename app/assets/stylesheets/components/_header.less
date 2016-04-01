@@ -1,0 +1,142 @@
+header.header-top {
+	&:extend(.clearfix);
+	position: fixed;
+	top: 0; left: 0;
+	width: 100%;
+	padding: 1.25em 0;
+	background-color: @white;
+	z-index: @z-index-header;
+
+	.brand-logo {
+		display: block;
+		float: left;
+		text-decoration: none;
+
+		img {
+			display: inline-block;
+			width: 128px; height: 65px;
+			vertical-align: middle;
+		}
+
+		.slogan {
+			display: inline-block;
+			color: @ship-gray;
+			font-size: .85em;
+			text-transform: uppercase;
+			padding-left: 1em;
+			letter-spacing: @letter-spacing-small;
+
+			strong {
+				color: @lust;
+				font-weight: bold;
+			}
+		}
+	}
+}
+
+// Header menu
+.header-menu {
+	ul {
+		display: none;
+
+		> .menu-item {
+			font-size: .85rem;
+			text-transform: uppercase;
+			padding: 0.65rem 0;
+
+			a {
+				display: block;
+				color: @ship-gray;
+				padding: 1.15rem .75rem;
+				text-decoration: none;
+				letter-spacing: @letter-spacing-small;
+				background-color: @white;
+				border-radius: @border-radius-normal;
+				transition: background, color;
+				transition-duration: @transition-duration-fast;
+
+				&:hover {
+					color: @white;
+					background-color: @black;
+				}
+			}
+
+			&.current {
+				> a {
+					color: @white;
+					font-weight: bold;
+					background: @lust;
+					box-shadow: inset 0px 4px 8px 0px rgba(146,5,6,1);
+				}
+			}
+		}
+
+		@media screen and (min-width: @grid-float-breakpoint) {
+			display: block;
+			float: right;
+		}
+	}
+
+	// Hamburger icon for mobile menu
+	.hamburger {
+		display: block;
+		float: right;
+		padding: 20px 10px;
+		margin: 10px 0 10px 0;
+		border-radius: .25em;
+		transition: background;
+		transition-duration: @transition-duration-fast;
+
+		.lines {
+			position: relative;
+			display: block;
+			width: @hamburger-line-width;
+			height: @hamburger-line-height;
+			background-color: @ship-gray;
+			border-radius: @hamburger-line-radius;
+			transition: background;
+			transition-duration: @transition-duration-fast;
+
+			&:before, &:after {
+				content: '';
+				position: absolute;
+				left: 0;
+				width: @hamburger-line-width;
+				height: @hamburger-line-height;
+				background-color: @ship-gray;
+				border-radius: @hamburger-line-radius;
+				transition: background;
+				transition-duration: @transition-duration-fast;
+			}
+
+			&:before { top: .575em; }
+			&:after { top: -.575em; }
+		}
+
+		&:focus,
+		&:hover {
+			background-color: @black;
+
+			.lines,
+			.lines:before,
+			.lines:after {
+				background-color: @lust;
+			}
+		}
+
+		&:active,
+		.active {
+			background-color: lighten(@black, 20%);
+
+			.lines,
+			.lines:before,
+			.lines:after {
+				background-color: lighten(@lust, 8%);
+			}
+		}
+
+		@media screen and (min-width: @grid-float-breakpoint) {
+			display: none;
+		}
+	}
+}

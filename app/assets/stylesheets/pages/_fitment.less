@@ -1,0 +1,81 @@
+.search {
+	position: fixed;
+	top: 100px;
+	left: 0; right: 0;
+	text-align: center;
+	padding: 1em 0;
+	border-top: 1px solid @zircon;
+	border-bottom: 2px solid @zircon;
+	background-color: @white;
+	z-index: 2;
+
+	.btn {
+		margin: 0;
+	}
+
+	input {
+		width: 480px;
+		height: 33px;
+		padding: 4px;
+		border: 2px solid @zircon;
+		border-radius: @border-radius-normal;
+		vertical-align: middle;
+		box-sizing: border-box;
+	}
+
+	.autocomplete-holder {
+		position: absolute;
+		top: 50px;
+		left: 0; right: 0;
+		width: 320px;
+
+		.ui-autocomplete {
+			max-height: 200px;
+			overflow-y: auto;
+			list-style: none;
+			margin: 20px 0 0 0;
+			padding: 10px;
+			text-align: left;
+			border: 2px solid @zircon;
+			border-radius: @border-radius-normal;
+			background-color: @white;
+			box-shadow: 0px 6px 12px 0px rgba(0, 0, 0, 0.2);
+
+			li {
+				cursor: pointer;
+				padding: 4px 0;
+			}
+		}
+	}
+}
+
+.fitment {
+	margin-top: 180px;
+	margin-bottom: 60px;
+
+	.row {
+		text-align: center;
+		padding: 8px 0;
+	}
+
+	.header {
+		font-weight: bold;
+		text-transform: uppercase;
+		border-bottom: 1px solid @zircon;
+	}
+
+	.handle:nth-child(odd) {
+		background-color: lighten(@zircon, 8%);
+		border-radius: @border-radius-normal;
+	}
+
+	.handle.current {
+		color: @white;
+		background-color: @lust;
+		border-radius: @border-radius-normal
+	}
+}
+
+.ui-helper-hidden-accessible {
+	display: none;
+}

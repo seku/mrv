@@ -1,0 +1,140 @@
+.dialog {
+	position: fixed;
+	visibility: hidden;
+	color: @black;
+	top: 0; right: 0; bottom: 0; left: 0;
+	text-align: center;
+	opacity: 0;
+	font-size: 1.15rem;
+	z-index: @z-index-dialog;
+	transition-property: opacity, visibility;
+	transition-duration: @transition-duration-fast, 0;
+	transition-delay: 0, @transition-duration-fast;
+
+	.bigger-text {
+		font-size: 1.5em;
+	}
+
+	&:before {
+		content: '';
+		display: inline-block;
+		height: 100%;
+		vertical-align: middle;
+		margin-right: -0.25em;
+	}
+
+	.dialog-background {
+		position: absolute;
+		top: 0; right: 0; bottom: 0; left: 0;
+		background: rgba(0, 0, 0, .5);
+		z-index: (@z-index-dialog - 5);
+	}
+
+	.js-dialog-close {
+		position: absolute;
+		top: (@grid-gutter-width / 2);
+		right: (@grid-gutter-width / 2);
+		cursor: pointer;
+		width: 48px; height: 48px;
+		border-radius: @border-radius-normal;
+		background-image: url('/assets/svg/x-mark.svg');
+		background-repeat: no-repeat;
+		background-position: center;
+		transition: background @transition-duration-normal;
+
+		&:hover {
+			background-color: darken(@white, 10%);
+		}
+	}
+
+	.dialog-wrapper {
+		position: relative;
+		display: inline-block;
+		min-height: 250px;
+		vertical-align: middle;
+		padding: (@grid-gutter-width / 2);
+		border-radius: @border-radius-normal;
+		background: @white;
+		z-index: (@z-index-dialog - 1);
+		transform: scale(.9);
+		transition: transform @transition-duration-normal ease-out;
+		box-shadow: 0px 0px 12px 0px rgba(0, 0, 0, 0.5);
+
+		.dialog-container {
+			overflow: auto;
+			padding: .75em @grid-gutter-width;
+		}
+	}
+
+	&.open {
+		visibility: visible;
+		opacity: 1;
+		transition-delay: 0;
+
+		.dialog-wrapper {
+			transform: scale(1);
+		}
+	}
+
+	&.dialog-full {
+		.dialog-wrapper {
+			width: 1062px;
+			min-height: 500px;
+		}
+	}
+
+	&.dialog-small {
+		.dialog-wrapper {
+			width: 45%;
+			min-height: 200px;
+			max-height: 50%;
+		}
+	}
+}
+
+.dialog-gallery {
+	.clearfix();
+
+	.preview {
+		float: left;
+		display: block;
+		max-height: 80%;
+		max-width: 60%;
+		padding-right: (@grid-gutter-width / 2);
+	}
+
+	.thumbnails {
+		text-align: left;
+		float: right;
+		width: 40%;
+
+		ul {
+			font-size: 0;
+			text-align: left;
+			list-style: none;
+			margin: 0;
+			padding: 0;
+
+			li {
+				cursor: pointer;
+				position: relative;
+				display: inline-block;
+				width: 90px; height: 64px;
+				margin: 3px;
+				border: 1px solid @zircon;
+
+				&.active {
+					border-color: @lust;
+				}
+
+				img {
+					position: absolute;
+					top: 0; right: 0; bottom: 0; left: 0;
+					margin: auto;
+					max-width: 100%;
+					max-height: 100%;
+				}
+			}
+		}
+	}
+}

@@ -1,17 +1,17 @@
-= link_to "/" do
-  %img{src: '/assets/logo.png'}
-  %span performance and emotions
-%nav
-  %ul
-    %li{class: is_current?("products")} 
-      %a(href="/products")
-        %p Products
-    %li{class: is_current?("racing_team")} 
-      %a(href="/racing_team")
-        %p Racing Team
-    %li{class: is_current?("distributors")} 
-      %a(href="/distributors")
-        %p Distributors
-    %li{class: is_current?("contact")} 
-      %a.show_contact_dialog(href="/")
-        %p Contact
+%section.container
+  %a.brand-logo(href="/")
+    %img{:src => '/assets/common/mrv-logo-128x65.png',
+        :srcset => '/assets/common/mrv-logo-128x65@2x.png 2x'}
+    %p.slogan performance and <strong>emotions</strong>
+  %nav.header-menu
+    %ul.list-inline
+      %li{:class => ['menu-item', is_current?("products")]}
+        %a(href="/products") Products
+      %li{:class => ['menu-item', is_current?("racing_team")]}
+        %a(href="/racing_team") Racing Team
+      %li{:class => ['menu-item', is_current?("distributors")]}
+        %a(href="/distributors") Distributors
+      %li{:class => ['menu-item', is_current?("contact")]}
+        %a.js-open-dialog(href="#" data-dialog-id="dialog-contact") Contact
+    %button.btn.hamburger
+      %span.lines
