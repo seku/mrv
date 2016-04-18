@@ -16,6 +16,9 @@
       %li
         %a.btn.btn-lines-gray.js-scrollto(href="#three_d")
           3D levers
+      %li
+        %a.btn.btn-lines-gray.js-scrollto(href="#special")
+          Special series
     %a.btn.btn-zircon.btn-fitment(href="/fitment")
       Fitment
 .container
@@ -23,71 +26,88 @@
     .content
       %h2.title
         Short levers
-      %p
-        The best for motorcycle races – giving you extra speed to operate a brake and a clutch in your motorcycle (operated with 2 fingers). The highest grade levers used on motorcycle races
-        The best design and improved features
-        Anodizing process of 16 phases
-        The highest precision of full CNC cutting
-        6 positions to adjust the levers you your individual preferences
-        The best levers ever by MRV-RACING
+      %ul
+        %li The best for motorcycle races – giving you extra speed to operate a brake and a clutch in your motorcycle (operated with 2 fingers).
+        %li The highest grade levers used on motorcycle races
+        %li The best design and improved features
+        %li Anodizing process of 16 phases
+        %li The highest precision of full CNC cutting
+        %li 6 positions to adjust the levers you your individual preferences
+        %li The best levers ever by MRV-RACING
       %button.btn.btn-lines-lust(data-dialog-id="short-levers") Show details
     .thumbnail
-      %img{src: "/assets/products/short_l_main.jpg"}
+      %img{src: "/assets/products/short/short-main.jpg"}
     #short-levers.dialog.dialog-full= render "dialogs/product_short"
 
   %section#long.product-info
     .content
       %h2.title
         Long levers
-      %p
-        The best replacement of the levers to tune your motorcycle (operated with 4 fingers)
-        The highest grade levers used on motorcycle races
-        The best design and improved features
-        Anodizing process of 16 phases
-        The highest precision of full CNC cutting
-        6 positions to adjust the levers you your individual preferences
-        The best levers ever by MRV-RACING
+      %ul
+        %li The best replacement of the levers to tune your motorcycle (operated with 4 fingers)
+        %li The highest grade levers used on motorcycle races
+        %li The best design and improved features
+        %li Anodizing process of 16 phases
+        %li The highest precision of full CNC cutting
+        %li 6 positions to adjust the levers you your individual preferences
+        %li The best levers ever by MRV-RACING
       %button.btn.btn-lines-lust(data-dialog-id="long-levers") Show details
     .thumbnail
-      %img{src: "/assets/products/long_l_main.jpg"}
+      %img{src: "/assets/products/long/long-main.jpg"}
     #long-levers.dialog.dialog-full= render "dialogs/product_long"
 
   %section#extendable.product-info
     .content
       %h2.title
         Extendable and foldable levers
-      %p
-        Foldable and extendable levers are the best choice for the motorcycle riders who use motorcycle for races, commuting and travelling. They give you an option to adjust them depending on occasion or particular preferences (operated with 2-4 fingers)
-        In case of falling off they fold preventing from getting broken.
-
-        The highest grade levers used on motorcycle races
-        The best design and improved features
-        Anodizing process of 16 phases
-        The highest precision of full CNC cutting
-        6 positions to adjust the levers you your individual preferences
-        The best levers ever by MRV-RACING
+      %ul
+        %li Foldable and extendable levers are the best choice for the motorcycle riders who use motorcycle for races, commuting and travelling.
+        %li They give you an option to adjust them depending on occasion or particular preferences (operated with 2-4 fingers)
+        %li In case of falling off they fold preventing from getting broken.
+        %li The highest grade levers used on motorcycle races
+        %li The best design and improved features
+        %li Anodizing process of 16 phases
+        %li The highest precision of full CNC cutting
+        %li 6 positions to adjust the levers you your individual preferences
+        %li The best levers ever by MRV-RACING
       %button.btn.btn-lines-lust(data-dialog-id="extendable-levers") Show details
     .thumbnail
-      %img{src: "/assets/products/extendable_l_main.jpg"}
+      %img{src: "/assets/products/extendable/extendable-main.jpg"}
     #extendable-levers.dialog.dialog-full= render "dialogs/extendable"
 
   %section#three_d.product-info
     .content
       %h2.title
         3d levers
-      %p
-        3d levers are the newest design with 3D surface preventing from slippery. The special hole releases the wind pressure while riding or racing .The is best replacement of the levers to tune your motorcycle (operated with 3-4 fingers)
-
-        The highest grade levers used on motorcycle races
-        The best design and improved features
-        Anodizing process of 16 phases
-        The highest precision of full CNC cutting
-        6 positions to adjust the levers you your individual preferences
-        The best levers ever by MRV-RACING
+      %ul
+        %li 3d levers are the newest design with 3D surface preventing from slippery. The special hole releases the wind pressure while riding or racing.
+        %li The is best replacement of the levers to tune your motorcycle (operated with 3-4 fingers)
+        %li The highest grade levers used on motorcycle races
+        %li The best design and improved features
+        %li Anodizing process of 16 phases
+        %li The highest precision of full CNC cutting
+        %li 6 positions to adjust the levers you your individual preferences
+        %li The best levers ever by MRV-RACING
       %button.btn.btn-lines-lust(data-dialog-id="3d-levers") Show details
     .thumbnail
-      %img{src: "/assets/products/3d_l_main.jpg"}
+      %img{src: "/assets/products/3d/3d-main.jpg"}
     #3d-levers.dialog.dialog-full= render "dialogs/threed"
+
+  %section#special.product-info
+    .content
+      %h2.title
+        Special series
+      %ul
+        %li The highest grade levers used on motorcycle races
+        %li The best design and improved features
+        %li Anodizing process of 16 phases
+        %li The highest precision of full CNC cutting
+        %li 6 positions to adjust the levers you your individual preferences
+        %li The best levers ever by MRV-RACING
+      %button.btn.btn-lines-lust(data-dialog-id="special-levers") Show details
+    .thumbnail
+      %img{src: "/assets/products/special-series/ss-main.jpg"}
+    #special-levers.dialog.dialog-full= render "dialogs/special"
 
 = javascript_include_tag("products")
 
