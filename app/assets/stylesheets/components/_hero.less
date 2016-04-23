@@ -34,11 +34,16 @@
 
 	.hero-text {
 		position: absolute;
-		top: 25%; left: 0; right: 0;
+		top: 10%; left: 0; right: 0;
 		color: @white;
 		text-align: center;
 		text-transform: uppercase;
-		// margin-top: -100px;
+		padding-left: 15px;
+		padding-right: 15px;
+
+		@media screen and (min-width: @screen-xs-min) {
+			top: 25%;
+		}
 
 		> h2 {
 			font-size: 4em;
