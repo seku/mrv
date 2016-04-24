@@ -12,7 +12,12 @@
 	transition-delay: 0, @transition-duration-fast;
 
 	.bigger-text {
-		font-size: 1.5em;
+		font-size: .5em;
+		font-size: 6vw;
+
+		@media screen and (min-width: @grid-mobile-breakpoint) {
+			font-style: 1.5em;
+		}
 	}
 
 	&:before {
@@ -85,9 +90,15 @@
 
 	&.dialog-small {
 		.dialog-wrapper {
-			width: 45%;
+			width: 95%;
 			min-height: 200px;
-			max-height: 50%;
+			overflow-y: auto;
+
+			@media screen and (min-width: @grid-float-breakpoint) {
+				min-height: 200px;
+				max-height: 50%;
+				width: 45%;
+			}
 		}
 	}
 }
