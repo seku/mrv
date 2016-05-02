@@ -36,7 +36,10 @@ section.product-info {
 			font-size: 2.5em;
 			text-transform: uppercase;
 			letter-spacing: @letter-spacing-wider;
-			margin-top: 2.25em;
+
+			@media screen and (min-width: @grid-float-breakpoint) {
+				margin-top: 2.25em;
+			}
 		}
 
 		p {
@@ -57,30 +60,34 @@ section.product-info {
 	}
 
 	&:nth-of-type(even) {
-		.content {
-			float: right;
-			width: 45%;
-			padding-left: (@grid-gutter-width / 2);
-		}
+		@media screen and (min-width: @grid-float-breakpoint) {
+			.content {
+				float: right;
+				width: 45%;
+				padding-left: (@grid-gutter-width / 2);
+			}
 
-		.thumbnail {
-			float: left;
-			width: 55%;
-			padding-right: (@grid-gutter-width / 2);
+			.thumbnail {
+				float: left;
+				width: 55%;
+				padding-right: (@grid-gutter-width / 2);
+			}
 		}
 	}
 
 	&:nth-of-type(odd) {
-		.content {
-			float: left;
-			width: 45%;
-			padding-right: (@grid-gutter-width / 2);
-		}
+		@media screen and (min-width: @grid-float-breakpoint) {
+			.content {
+				float: left;
+				width: 45%;
+				padding-right: (@grid-gutter-width / 2);
+			}
 
-		.thumbnail {
-			float: right;
-			width: 55%;
-			padding-left: (@grid-gutter-width / 2);
+			.thumbnail {
+				float: right;
+				width: 55%;
+				padding-left: (@grid-gutter-width / 2);
+			}
 		}
 	}
 
@@ -97,68 +104,22 @@ section.product-info {
 			display: none;
 		}
 	}
-}
 
-.products {
-	.col-md-3 {
-		.block {
-			margin: 12px;
-			border: 1px solid #DCDEE3;
-			background: #FFF;
-		}
-		ul {
-			list-style: none;
-			li a {
-				display: block;
-				position: relative;
-				padding: 8px 26px 8px 0;
-				line-height: 18px;
-				color: #666;
-				font-size: 14px;
-			}
-		}
-	}
-	.col-md-9 {
-		.navigation_frames {
-			li {
-				cursor: pointer;
-				display: inline-block;
-				height: 200px;
-				width: 200px;
-				border: 1px solid red;
-				margin-top: 30px;
-				margin-left: 20px;
-				img {
-					height: 180px;
-					width: 180px;
-				}
-			}
-		}
-		.categories {
-			display: none;
-			&.current {
-				display: block;
-			}
+	@media screen and (max-width: (@grid-float-breakpoint - 1)) {
+		margin-bottom: 20px;
+		padding-bottom: 20px;
+		border-bottom: 1px solid @zircon;
 
-			.preview {
-				height: 300px;
-				width: 500px;
-			}
-			.thumbnails {
-				img {
-					display: inline-block;
-					height: 50px;
-					width: 70px;
-					cursor: pointer;
-				}
-			}
+		&:last-child {
+			margin-bottom: 0;
+			border-bottom: none;
 		}
-	}
-	.easyzoom {
-		position: relative;
-		display: inline-block;
-		img {
-			vertical-align: bottom;
+
+		.content .btn {
+			display: block;
+			margin-top: 50px;
+			margin-left: auto;
+			margin-right: auto;
 		}
 	}
 }

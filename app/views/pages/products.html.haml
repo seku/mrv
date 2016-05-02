@@ -23,6 +23,8 @@
       Fitment
 .container
   %section#short.product-info
+    .thumbnail
+      %img{src: "/assets/products/short/short-main.jpg"}
     .content
       %h2.title
         Short levers
@@ -35,11 +37,11 @@
         %li 6 positions to adjust the levers you your individual preferences
         %li The best levers ever by MRV-RACING
       %button.btn.btn-lines-lust(data-dialog-id="short-levers") Show details
-    .thumbnail
-      %img{src: "/assets/products/short/short-main.jpg"}
     #short-levers.dialog.dialog-full= render "dialogs/product_short"
 
   %section#long.product-info
+    .thumbnail
+      %img{src: "/assets/products/long/long-main.jpg"}
     .content
       %h2.title
         Long levers
@@ -52,11 +54,11 @@
         %li 6 positions to adjust the levers you your individual preferences
         %li The best levers ever by MRV-RACING
       %button.btn.btn-lines-lust(data-dialog-id="long-levers") Show details
-    .thumbnail
-      %img{src: "/assets/products/long/long-main.jpg"}
     #long-levers.dialog.dialog-full= render "dialogs/product_long"
 
   %section#extendable.product-info
+    .thumbnail
+      %img{src: "/assets/products/extendable/extendable-main.jpg"}
     .content
       %h2.title
         Extendable and foldable levers
@@ -71,11 +73,11 @@
         %li 6 positions to adjust the levers you your individual preferences
         %li The best levers ever by MRV-RACING
       %button.btn.btn-lines-lust(data-dialog-id="extendable-levers") Show details
-    .thumbnail
-      %img{src: "/assets/products/extendable/extendable-main.jpg"}
     #extendable-levers.dialog.dialog-full= render "dialogs/extendable"
 
   %section#three_d.product-info
+    .thumbnail
+      %img{src: "/assets/products/3d/3d-main.jpg"}
     .content
       %h2.title
         3d levers
@@ -89,11 +91,11 @@
         %li 6 positions to adjust the levers you your individual preferences
         %li The best levers ever by MRV-RACING
       %button.btn.btn-lines-lust(data-dialog-id="3d-levers") Show details
-    .thumbnail
-      %img{src: "/assets/products/3d/3d-main.jpg"}
     #3d-levers.dialog.dialog-full= render "dialogs/threed"
 
   %section#special.product-info
+    .thumbnail
+      %img{src: "/assets/products/special-series/ss-main.jpg"}
     .content
       %h2.title
         Special series
@@ -105,8 +107,6 @@
         %li 6 positions to adjust the levers you your individual preferences
         %li The best levers ever by MRV-RACING
       %button.btn.btn-lines-lust(data-dialog-id="special-levers") Show details
-    .thumbnail
-      %img{src: "/assets/products/special-series/ss-main.jpg"}
     #special-levers.dialog.dialog-full= render "dialogs/special"
 
 = javascript_include_tag("products")
