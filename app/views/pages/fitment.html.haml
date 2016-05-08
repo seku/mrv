@@ -9,17 +9,17 @@
 
 .container
   .row.header
-    .quarter Make
-    .quarter Model
-    .quarter Year
-    .quarter Code
+    .quarter.third-small Make
+    .quarter.third-small Model
+    .quarter.hide-small Year
+    .quarter.third-small Code
 
   - @handles.each do |handle|
     .row.handle{id: handle.humanized_code}
-      .quarter= handle.make
-      .quarter= handle.kind
-      .quarter= handle.years
-      .quarter= handle.code
+      .quarter.third-small= handle.make
+      .quarter.third-small= handle.kind
+      .quarter.hide-small= handle.years
+      .quarter.third-small= handle.code
 
 :javascript
   var handles = #{@handles_for_js}

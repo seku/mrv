@@ -11,8 +11,6 @@ $(document).ready ->
 		if $next.length == 0
 			$next = $image.siblings().first()
 
-		console.log $next
-		# $image.removeClass 'animate'
 		$image.toggleClass 'animate'
 		$next.toggleClass 'animate'
 		return false

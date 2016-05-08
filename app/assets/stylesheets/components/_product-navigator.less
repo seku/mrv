@@ -1,0 +1,112 @@
+.navigator {
+	position: fixed;
+	top: 100px; left: 0; right: 0;
+	padding: 1em 0;
+	text-align: left;
+	text-transform: uppercase;
+	border-top: 1px solid @zircon;
+	border-bottom: 2px solid @zircon;
+	background-color: @white;
+
+	.btn-fitment {
+		float: right;
+	}
+
+	.levers-type {
+		height: 0;
+		visibility: hidden;
+		text-align: center;
+		opacity: 0;
+		transition-property: opacity, visibility;
+		transition-duration: @transition-duration-normal, 0s;
+		transition-delay: .2s, 0s;
+
+		@media screen and (min-width: @grid-float-breakpoint) {
+			display: block;
+			height: auto;
+			visibility: visible;
+			float: left;
+			text-align: left;
+			opacity: 1;
+		}
+	}
+
+	a {
+		color: @ship-gray;
+		text-decoration: none;
+		margin-bottom: 0;
+	}
+
+	.js-show-more {
+		float: left;
+
+		.icon-dropdown {
+			position: relative;
+			display: inline-block;
+			vertical-align: middle;
+			width: 38px;
+			height: 48px;
+			transition: transform @transition-duration-normal;
+
+			&:before, &:after {
+				content: '';
+				position: absolute;
+				top: 50%;
+				display: block;
+				width: 12px;
+				height: 1px;
+				background-color: @black;
+				transition: transform @transition-duration-normal;
+			}
+
+			&:before {
+				left: 50%;
+				transform-origin: 0 100%;
+				transform: rotate(-40deg) scaleY(1.5);
+			}
+
+			&:after {
+				right: 50%;
+				transform-origin: 100% 100%;
+				transform: rotate(40deg) scaleY(1.5);
+			}
+		}
+
+		@media screen and (min-width: @grid-float-breakpoint) {
+			display: none;
+		}
+	}
+
+	// Open navigator
+	&.open {
+		.levers-type {
+			height: auto;
+			visibility: visible;
+			opacity: 1;
+
+			@media screen and (max-width: (@grid-float-breakpoint - 1)) {
+				li {
+					display: block;
+					clear: both;
+					margin: 0;
+
+					&:first-child {
+						padding-top: 10px;
+					}
+				}
+			}
+		}
+
+		.js-show-more .icon-dropdown {
+			transform: translateY(-10%);
+
+			&:before {
+				transform: rotate(40deg) translateX(-1px) scaleY(1.5) ;
+			}
+
+			&:after {
+				transform: rotate(-40deg) translateX(1px) scaleY(1.5);
+			}
+		}
+	}
+}

@@ -1,0 +1,31 @@
+.container
+  %span.js-show-more
+    Rozwiń <span class="icon-dropdown"></span>
+  %a.btn.btn-zircon.btn-fitment(href="/fitment")
+    Fitment
+  %ul.list-inline.levers-type
+    %li
+      %a.btn.btn-lines-gray.js-scrollto(href="#short")
+        short levers
+    %li
+      %a.btn.btn-lines-gray.js-scrollto(href="#long")
+        long levers
+    %li
+      %a.btn.btn-lines-gray.js-scrollto(href="#extendable")
+        extendable and foldable levers
+    %li
+      %a.btn.btn-lines-gray.js-scrollto(href="#three_d")
+        3D levers
+    %li
+      %a.btn.btn-lines-gray.js-scrollto(href="#special")
+        Special series
+
+:coffee
+  $(document).ready ->
+    $('.js-show-more').on 'click', (_event) ->
+      $navigator = $(this).closest('.navigator')
+
+      $navigator.toggleClass 'open'
+      $navigator.find('ul li').one 'click', ->
+        $navigator.removeClass 'open'
+        return

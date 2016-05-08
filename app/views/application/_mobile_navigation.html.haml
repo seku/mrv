@@ -1,0 +1,22 @@
+.navigator-header
+  .js-close-navigator
+%ul
+  %li{:class => ['menu-item', is_current?("home")]}
+    %a(href="/") Home
+  %li{:class => ['menu-item', is_current?("products")]}
+    %a(href="/products") Products
+  %li{:class => ['menu-item', is_current?("racing_team")]}
+    %a(href="/racing_team") Racing Team
+  %li{:class => ['menu-item', is_current?("distributors")]}
+    %a(href="/distributors") Distributors
+  %li{:class => ['menu-item', is_current?("contact")]}
+    %a.js-open-dialog(href="#" data-dialog-id="dialog-contact") Contact
+
+:coffee
+  $(document).ready ->
+    $('.js-open-mobile-navigator').on 'click', ->
+      $('.mobile-navigator').addClass 'show'
+      return
+    $('.js-close-navigator').on 'click', ->
+      $('.mobile-navigator').removeClass 'show'
+      return
