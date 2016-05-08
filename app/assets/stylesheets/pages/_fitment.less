@@ -1,3 +1,7 @@
+.main-content.fitment {
+	padding-top: 180px;
+}
+
 .search {
 	position: fixed;
 	top: 100px;
@@ -14,13 +18,17 @@
 	}
 
 	input {
-		width: 480px;
+		width: 70%;
 		height: 33px;
 		padding: 4px;
 		border: 2px solid @zircon;
 		border-radius: @border-radius-normal;
 		vertical-align: middle;
 		box-sizing: border-box;
+
+		@media screen and (min-width: @grid-float-breakpoint) {
+			width: 480px;
+		}
 	}
 
 	.autocomplete-holder {
@@ -28,6 +36,10 @@
 		top: 50px;
 		left: 0; right: 0;
 		width: 320px;
+
+		@media screen and (max-width: (@grid-float-breakpoint - 1)) {
+			width: 100%;
+		}
 
 		.ui-autocomplete {
 			max-height: 200px;
@@ -41,6 +53,12 @@
 			background-color: @white;
 			box-shadow: 0px 6px 12px 0px rgba(0, 0, 0, 0.2);
 
+			@media screen and (max-width: (@grid-float-breakpoint - 1)) {
+				left: 0!important;
+				width: 100%!important;
+				right: 0;
+			}
+
 			li {
 				cursor: pointer;
 				padding: 4px 0;
@@ -50,9 +68,6 @@
 }
 
 .fitment {
-	margin-top: 180px;
-	margin-bottom: 60px;
-
 	.row {
 		text-align: center;
 		padding: 8px 0;
