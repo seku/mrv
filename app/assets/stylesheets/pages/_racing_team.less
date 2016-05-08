@@ -1,7 +1,14 @@
 .racing_team,
 .distributors {
 	font-size: 1.5em;
-	margin-top: 220px;
-	margin-bottom: 150px;
+	padding-top: 120px;
+	padding-bottom: 10px;
 	text-align: center;
+	padding-left: (@grid-gutter-width / 2);
+	padding-right: (@grid-gutter-width / 2);
+
+	@media screen and (min-width: @grid-float-breakpoint) {
+		padding-top: 220px;
+		padding-bottom: 150px;
+	}
 }

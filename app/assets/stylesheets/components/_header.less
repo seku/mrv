@@ -19,13 +19,21 @@ header.header-top {
 		}
 
 		.slogan {
-			display: inline-block;
-			padding-left: 2em;
+			display: none;
+			padding-left: 1em;
 			vertical-align: middle;
 
 			strong {
 				color: @lust;
 				font-weight: bold;
+			}
+
+			@media screen and (min-width: @grid-float-breakpoint) {
+				padding-left: 2em;
+			}
+
+			@media screen and (min-width: 410px) {
+				display: inline-block;
 			}
 		}
 	}

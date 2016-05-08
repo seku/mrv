@@ -8,4 +8,6 @@ $(document).ready ->
 		$dialogGallery.find('li.active').removeClass 'active'
 		$this.closest('li').addClass 'active'
 
+		$this.closest('.dialog-container').animate { scrollTop: 0 }, 400
+
 		return

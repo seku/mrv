@@ -1,7 +1,6 @@
 %section.container
   %a.brand-logo(href="/")
-    %img.logo{:src => '/assets/common/mrv-logo-128x65.png',
-        :srcset => '/assets/common/mrv-logo-128x65@2x.png 2x'}
+    %img.logo{:src => '/assets/svg/mrv-logo-128x65.svg'}
     %img.slogan{:src => '/assets/svg/pae.svg'}
   %nav.header-menu
     %ul.list-inline
@@ -13,5 +12,5 @@
         %a(href="/distributors") Distributors
       %li{:class => ['menu-item', is_current?("contact")]}
         %a.js-open-dialog(href="#" data-dialog-id="dialog-contact") Contact
-    %button.btn.hamburger
+    %button.btn.hamburger.js-open-mobile-navigator
       %span.lines
