@@ -3,12 +3,20 @@
 	opacity: 0;
 	transform: scale(1);
 
-	&.animate {
-		animation-iteration-count: 1;
-		animation-name: backgroundMove;
-		animation-duration: 6s;
-		animation-timing-function: linear;
+	@media screen and (max-width: (@grid-mobile-breakpoint - 1)) {
+		&.animate {
+			opacity: 1;
+		}
 	}
+
+	@media screen and (min-width: @grid-mobile-breakpoint) {
+			&.animate {
+				animation-iteration-count: 1;
+				animation-name: backgroundMove;
+				animation-duration: 6s;
+				animation-timing-function: linear;
+			}
+		}
 }
 
 .hero-scale-top { background-position: 50% 0%; }

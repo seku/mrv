@@ -12,7 +12,11 @@
 	transition-delay: 0, @transition-duration-fast;
 
 	.bigger-text {
-		font-size: 1.5em;
+		font-size: 6vw;
+
+		@media screen and (min-width: @grid-mobile-breakpoint) {
+			font-size: 1.5em;
+		}
 	}
 
 	&:before {
@@ -79,15 +83,36 @@
 	&.dialog-full {
 		.dialog-wrapper {
 			width: 98%;
-			min-height: 250px;
+			height: 98%;
+
+			@media screen and (max-width: (@grid-float-breakpoint - 1)) {
+				padding: 0;
+
+				.dialog-container {
+					height: 100%;
+					overflow-y: auto;
+					padding: 5em .7em 2em .7em;
+				}
+			}
+
+			@media screen and (min-width: @grid-float-breakpoint) {
+				width: 98%;
+				min-height: 250px;
+			}
 		}
 	}
 
 	&.dialog-small {
 		.dialog-wrapper {
-			width: 45%;
+			width: 95%;
 			min-height: 200px;
-			max-height: 50%;
+			overflow-y: auto;
+
+			@media screen and (min-width: @grid-float-breakpoint) {
+				min-height: 200px;
+				max-height: 50%;
+				width: 45%;
+			}
 		}
 	}
 }
@@ -96,17 +121,20 @@
 	.clearfix();
 
 	.preview {
-		float: left;
 		display: block;
-		max-height: 80%;
-		max-width: 70%;
-		padding-right: (@grid-gutter-width / 2);
+		max-width: 100%;
+
+		@media screen and (min-width: @grid-float-breakpoint) {
+			float: left;
+			display: block;
+			max-height: 80%;
+			max-width: 70%;
+			padding-right: (@grid-gutter-width / 2);
+		}
 	}
 
 	.thumbnails {
 		text-align: left;
-		float: right;
-		width: 30%;
 
 		ul {
 			font-size: 0;
@@ -135,6 +163,11 @@
 					max-height: 100%;
 				}
 			}
+		}
+
+		@media screen and (min-width: @grid-float-breakpoint) {
+			float: right;
+			width: 30%;
 		}
 	}
 }

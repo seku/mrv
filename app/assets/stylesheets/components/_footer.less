@@ -11,8 +11,9 @@ section.footer {
 	margin-bottom: 1.25rem;
 
 	li {
-		margin-left: 1.15rem;
-		margin-right: 1.15rem;
+		display: block;
+		padding: 0 15px;
+		margin: 0;
 
 		a {
 			color: @white;
@@ -25,16 +26,23 @@ section.footer {
 				color: @lust;
 			}
 		}
+
+		@media screen and (min-width: @grid-mobile-breakpoint) {
+			display: inline-block;
+			margin-left: 1.15rem;
+			margin-right: 1.15rem;
+			padding: 0;
+		}
 	}
 }
 
 .footer-copyright {
 	color: lighten(@ship-gray, 20%);
+	padding-top: 20px;
 	font-size: 1rem;
 	text-align: center;
-}
 
-// TODO
-#dialog {
-	display: none;
+	@media screen and (min-width: @grid-mobile-breakpoint) {
+		padding-top: 0;
+	}
 }
