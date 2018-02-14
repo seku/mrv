@@ -15,3 +15,8 @@ test:
   database: mrv_test
   <<: *common
 
+production:
+  adapter: postgresql
+  url: <%= ENV['DATABASE_URL'] %> #This is the environment variable created by our Dokku command earlier
+  encoding: unicode
+  pool: 5
