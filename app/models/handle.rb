@@ -1,4 +1,4 @@
-class Handle < ActiveRecord::Base
+class Handle < ApplicationRecord
 
   before_save :set_fake_search
 
@@ -8,5 +8,5 @@ class Handle < ActiveRecord::Base
 
   def set_fake_search
     self.fake = kind.gsub(" ", "")
-  end 
+  end
 end

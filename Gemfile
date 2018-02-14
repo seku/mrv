@@ -1,26 +1,24 @@
 source 'https://rubygems.org'
 
-
-gem 'rails', '4.2.5'
-gem 'pg'
-gem 'uglifier', '>= 1.3.0'
-gem 'coffee-rails', '~> 4.1.0'
+gem "puma"
+gem 'rails', '5.0.6'
+gem 'pg', '~> 0.21'
+gem 'uglifier'
+gem 'coffee-rails'
 gem 'jquery-rails'
 gem 'turbolinks'
 gem "haml"
 gem "rails_admin"
-
+# gem 'libv8', '~> 3.16', '>= 3.16.14.7'
 gem 'less-rails'
 gem 'therubyracer'
 
 group :development, :test do
-  gem "awesome_print"
   gem "pry-rails"
   gem "pry-byebug"
 end
 
 group :development do
-  gem 'web-console', '~> 2.0'
   gem 'spring'
 end
 
