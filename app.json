@@ -1,0 +1,10 @@
+{
+  "name": "mrv-racing",
+  "description": "sport motorcycles levers",
+  "keywords": ["mrv-racing.com"],
+  "scripts": {
+    "dokku": {
+      "postdeploy": "bundle exec rake db:migrate"
+    }
+  }
+}
